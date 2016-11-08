@@ -31,11 +31,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from yuga device
 $(call inherit-product, device/sony/yuga/yuga.mk)
 
-# Inherit AOSP common.
-$(call inherit-product, vendor/aosp/common.mk)
+$(call inherit-product, vendor/maruos/device-maru.mk)
+$(call inherit-product, vendor/maruos/BoardConfigVendor.mk)
+
+# allow /vendor/maruos files
+PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := aosp_yuga
+PRODUCT_NAME := maru_yuga
 PRODUCT_DEVICE := yuga
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony

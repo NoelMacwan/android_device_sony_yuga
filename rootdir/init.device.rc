@@ -1,3 +1,5 @@
+import init.maru.rc
+
 on boot
     # Owner for the proximity sensor
     chown system system /sys/devices/i2c-2/2-0054/threshold
